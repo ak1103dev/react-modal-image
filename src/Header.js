@@ -2,9 +2,8 @@ import React from "react";
 
 import { ZoomInIcon, ZoomOutIcon, DownloadIcon, CloseIcon, RotateIcon } from "./icons";
 
-const download = e => {
-  console.log(e.target.href);
-  fetch(e.target.href, {
+const download = image => {
+  fetch(image, {
     method: "GET",
     headers: {}
   })
@@ -37,9 +36,9 @@ const Header = ({
   <div className="__react_modal_image__header">
     <span className="__react_modal_image__icon_menu">
       {enableDownload && (
-        <a href={image} download onClick={download}>
+        <div onClick={() => download(image)}>
           <DownloadIcon />
-        </a>
+        </div>
       )}
       {enableZoom && (
         <a onClick={toggleZoom}>

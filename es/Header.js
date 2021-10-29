@@ -1,9 +1,8 @@
 import React from "react";
 import { ZoomInIcon, ZoomOutIcon, DownloadIcon, CloseIcon, RotateIcon } from "./icons";
 
-var download = function download(e) {
-  console.log(e.target.href);
-  fetch(e.target.href, {
+var download = function download(image) {
+  fetch(image, {
     method: "GET",
     headers: {}
   }).then(function (response) {
@@ -35,10 +34,10 @@ var Header = function Header(_ref) {
     className: "__react_modal_image__header"
   }, React.createElement("span", {
     className: "__react_modal_image__icon_menu"
-  }, enableDownload && React.createElement("a", {
-    href: image,
-    download: true,
-    onClick: download
+  }, enableDownload && React.createElement("div", {
+    onClick: function onClick() {
+      return download(image);
+    }
   }, React.createElement(DownloadIcon, null)), enableZoom && React.createElement("a", {
     onClick: toggleZoom
   }, zoomed ? React.createElement(ZoomOutIcon, null) : React.createElement(ZoomInIcon, null)), enableRotate && React.createElement("a", {
