@@ -36,9 +36,9 @@ const Header = ({
   <div className="__react_modal_image__header">
     <span className="__react_modal_image__icon_menu">
       {enableDownload && (
-        <div onClick={() => download(image)}>
+        <a onClick={() => download(image)}>
           <DownloadIcon />
-        </div>
+        </a>
       )}
       {enableZoom && (
         <a onClick={toggleZoom}>

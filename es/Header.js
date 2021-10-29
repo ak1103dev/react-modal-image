@@ -34,7 +34,7 @@ var Header = function Header(_ref) {
     className: "__react_modal_image__header"
   }, React.createElement("span", {
     className: "__react_modal_image__icon_menu"
-  }, enableDownload && React.createElement("div", {
+  }, enableDownload && React.createElement("a", {
     onClick: function onClick() {
       return download(image);
     }
