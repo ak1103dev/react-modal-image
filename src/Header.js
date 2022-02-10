@@ -11,10 +11,12 @@ const Header = ({
   onClose,
   enableDownload,
   enableZoom,
-  enableRotate
+  enableRotate,
+  Meta,
 }) => (
   <div className="__react_modal_image__header">
     <span className="__react_modal_image__icon_menu">
+      <Meta />
       {enableDownload && (
         <a href={image} download>
           <DownloadIcon />

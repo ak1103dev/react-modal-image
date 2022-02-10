@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import StyleInjector, { lightboxStyles } from "./styles";
 
@@ -142,7 +142,8 @@ export default class Lightbox extends Component {
       hideDownload,
       hideZoom,
       showRotate,
-      imageBackgroundColor = "black"
+      imageBackgroundColor = "black",
+      meta = () => <Fragment />,
     } = this.props;
     const { move, zoomed, rotationDeg } = this.state;
 
@@ -211,6 +212,7 @@ export default class Lightbox extends Component {
             enableDownload={!hideDownload}
             enableZoom={!hideZoom}
             enableRotate={!!showRotate}
+            Meta={meta}
           />
         </div>
       </div>
