@@ -45,6 +45,7 @@ import ModalImage from "react-modal-image";
 | `hideZoom`             | `boolean` | Optional. Set to `true` to hide zoom-button from the Lightbox.                                                |
 | `showRotate`           | `boolean` | Optional. Set to `true` to show rotate-button within the Lightbox.                                            |
 | `imageBackgroundColor` | `String`  | Optional. Background color of the image shown in Lightbox. Defaults to black. Handy for transparent images.   |
+| `Meta`                 | `Function`| Optional. Render Meta component on Header in right side example () => <div>Edit Button</div>                  | 
 
 ## Lightbox-only API for advanced usage
 
